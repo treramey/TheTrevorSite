@@ -1,0 +1,86 @@
+.about {
+  text-align: center;
+  margin-top: 140px;
+}
+
+.primary-header {
+  font-family: $font-primary;
+  margin: 0;
+  font-size: 7rem;
+  letter-spacing: 4px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 300ms ease-out;
+  @media only screen and (max-width: 64em) {
+    font-size: 7rem;
+  }
+  @media only screen and (max-width: 44.375em) {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+  }
+  @media only screen and (max-width: 31.25em) {
+    span {
+      display: block;
+    }
+    letter-spacing: none;
+  }
+  opacity: 1;
+  visibility: visible;
+  transition: all 300ms ease-out;
+}
+
+.primary-sub {
+  font-family: $font-primary;
+  line-height: 1;
+  font-size: 38px;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: all 300ms ease-out;
+  @media only screen and (max-width: 44.375em) {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  &__word {
+    display: inline-block;
+    vertical-align: top;
+    height: 5rem;
+    overflow: hidden;
+    @media only screen and (max-width: 44.375em) {
+      height: 2.5rem;
+    }
+    * {
+      transition: all 250ms;
+    }
+    &__bottom {
+      visibility: hidden;
+    }
+    &--active * {
+      transform: translateY(-4rem);
+    }
+    &--active &__bottom {
+      visibility: visible;
+    }
+  }
+  &__top {
+    margin-bottom: 4px;
+  }
+  &__bottom {
+    color: #22262a;
+    background-color: $color-white;
+    padding: 5px;
+  }
+}
+
+.about_button {
+  font-family: $font-primary;
+  margin: auto;
+  margin-top: 6rem;
+  width: 16rem;
+  @media screen and (max-width: 768px) {
+    margin-top: 4rem;
+  }
+
+  &__bottom {
+  }
+}
