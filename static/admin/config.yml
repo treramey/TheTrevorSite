@@ -1,11 +1,8 @@
 backend:
   name: github
-  # change repo to your git repository url
   repo: treramey/TheTrevorSite
-
 media_folder: static/assets
 public_folder: /assets
-
 collections:
   - name: settings
     label: Settings
@@ -47,14 +44,20 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     fields:
-      - { label: Template, name: template, widget: hidden, default: BlogPost }
+      - label: Template
+        name: template
+        widget: hidden
+        default: BlogPost
       - name: path
         label: Path
         widget: string
-        pattern: [/]
-        hint: "Path must start with /"
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
+        # pattern: [/]
+        hint: Path must start with /
+      - name: date
+        label: Date
+        widget: datetime
+      - name: title
+        label: Title
       - label: Meta Description
         name: metaDescription
         widget: text
@@ -67,4 +70,6 @@ collections:
         media_library:
           config:
             multiple: false
-      - { name: body, label: Body, widget: markdown }
+      - name: body
+        label: Body
+        widget: markdown
