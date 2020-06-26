@@ -45,7 +45,7 @@ const Contact = () => {
           </a>
         </li>
 
-        <li>
+        {/* <li>
           <a
             href="https://drive.google.com/file/d/1Lg9LpGQAwvgm_s5XF7AEiCv_diAiAhkC/view?usp=sharing"
             target="_blank"
@@ -56,7 +56,7 @@ const Contact = () => {
               <IoMdDocument />
             </div>
           </a>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

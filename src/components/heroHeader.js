@@ -1,6 +1,8 @@
 import React from "react";
 import { StaticQuery, graphql, Link } from "gatsby";
 import { AwesomeButton } from "react-awesome-button";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+
 import "../styles/global.scss";
 export default () => (
   <StaticQuery
@@ -25,9 +27,9 @@ export default () => (
             __html: data.site.siteMetadata.home.description,
           }}
         />
-        <Link to="/contact" className="button -primary">
+        <AniLink to="/contact" swipe top="exit" entryOffset={80}>
           <AwesomeButton type="secondary"> Get in touch &rarr;</AwesomeButton>
-        </Link>
+        </AniLink>
       </div>
     )}
   />
