@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import Navigation from "../components/navigation";
+import Contact from "./Contact/contact";
 
 import "prismjs/themes/prism-okaidia.css";
 
@@ -18,6 +19,7 @@ export default ({ children }) => {
   );
   return (
     <div className="site-wrapper">
+      <Contact />
       <header className="site-header">
         <div className="site-title">
           <Link to="/">{data.site.siteMetadata.title}</Link>

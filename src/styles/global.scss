@@ -10,7 +10,7 @@
 @import "abstracts/variables", "abstracts/mixins";
 
 // Base
-@import "base/base";
+@import "base/base", "base/scroll";
 
 // Components
 @import "components/about", "components/contact", "components/footer",

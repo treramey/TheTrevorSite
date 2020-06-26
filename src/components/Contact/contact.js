@@ -1,23 +1,12 @@
 import React from "react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { IoMdDocument } from "react-icons/io";
 import "../../styles/global.scss";
 
 const Contact = () => {
   return (
     <div className="contact">
       <ul className="contact__list">
-        <li>
-          <a
-            href="https://www.linkedin.com/in/treramey/"
-            target="_blank"
-            className="contact__link contact__link-linkedin"
-          >
-            <div className="contact__item">
-              <span className="contact__label">Linkedin</span>
-              <FaLinkedin />
-            </div>
-          </a>
-        </li>
         <li>
           <a
             href="https://github.com/treramey"
@@ -30,29 +19,41 @@ const Contact = () => {
             </div>
           </a>
         </li>
-
         <li>
           <a
-            href="mailto:hello@treramey.dev"
+            href="https://www.linkedin.com/in/treramey/"
             target="_blank"
-            className="contact__link contact__link-email"
+            className="contact__link contact__link-linkedin"
           >
             <div className="contact__item">
-              <span className="contact__label">Email</span>
-              <font-awesome-icon icon="['far', 'envelope']" />
+              <span className="contact__label">Linkedin</span>
+              <FaLinkedin />
             </div>
           </a>
         </li>
 
         <li>
           <a
-            href="https://drive.google.com/file/d/1Ve9kGzylOyERVpH5iGphpWuwUfOs9nkf/view?usp=sharing"
+            href="https://twitter.com/treramey"
+            target="_blank"
+            className="contact__link contact__link-twitter"
+          >
+            <div className="contact__item">
+              <span className="contact__label">Twitter</span>
+              <FaTwitter />
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://drive.google.com/file/d/1Lg9LpGQAwvgm_s5XF7AEiCv_diAiAhkC/view?usp=sharing"
             target="_blank"
             className="contact__link contact__link-resume"
           >
             <div className="contact__item">
               <span className="contact__label">Resume</span>
-              <font-awesome-icon icon="['far', 'file']" />
+              <IoMdDocument />
             </div>
           </a>
         </li>

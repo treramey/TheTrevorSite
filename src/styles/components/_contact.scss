@@ -1,16 +1,17 @@
 .contact {
-  position: absolute;
+  font-family: $font-primary;
+  position: fixed;
   top: 50%;
-  left: -11rem;
+  left: -9rem;
   transform: translateY(-50%);
   z-index: $layer-contact;
   visibility: visible;
   @media screen and (max-width: 768px) {
     visibility: hidden;
   }
-  @media only screen and (min-width: 100em) {
-    left: -12.5rem;
-  }
+  // @media only screen and (min-width: 100em) {
+  //   left: -12.5rem;
+  // }
   &__list {
     list-style: none;
   }
@@ -23,14 +24,14 @@
     &:link {
       display: block;
       color: $color-white;
-      font-size: 2.5rem;
-      padding: 1.2rem;
+      font-size: 28px;
+      padding: 1rem;
       transition: all 450ms $cubic-bezier-primary;
       text-decoration: none;
-      @media only screen and (min-width: 100em) {
-        padding: 1.5rem;
-        font-size: 2.8rem;
-      }
+      // @media only screen and (min-width: 100em) {
+      //   padding: 1.5rem;
+      //   font-size: 32px;
+      // }
     }
     &-linkedin {
       background-color: $color-linkedin;
@@ -41,25 +42,25 @@
     &-resume {
       background-color: $color-resume;
     }
-    &-email {
-      background-color: $color-email;
+    &-twitter {
+      background-color: $color-twitter;
     }
     &:hover,
     &:active,
     &focus {
-      transform: translateX(6.4rem);
+      transform: translateX(5.5rem);
     }
   }
   &__label {
     display: inline-block;
     vertical-align: middle;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     margin-right: 1.2rem;
-    width: 5.8rem;
+    width: 5rem;
     text-align: right;
     // letter-spacing: 1px;
-    @media only screen and (min-width: 100em) {
-      width: 10.8rem;
-    }
+    // @media only screen and (min-width: 100em) {
+    //   width: 10.8rem;
+    // }
   }
 }
