@@ -8,7 +8,7 @@ body {
 }
 body.light {
   --primary-color: #985eff;
-  --primary-text-color: #fff;
+  --primary-text-color: #985eff;
   --featured-bg: #493b8a;
   --featured-text: #fff;
   --secondary-color: #10072b;
@@ -28,7 +28,7 @@ body.light {
 }
 body.dark {
   --primary-color: #bb86fc;
-  --primary-text-color: #fff;
+  --primary-text-color: #bb86fc;
   --featured-bg: #66578d;
   --featured-text: #fff;
   --secondary-color: #66578d;
@@ -38,7 +38,7 @@ body.dark {
   --site-header: var(--background);
   --card-bg: #1d1d1d;
   --card-bdr: #1d1d1d;
-  --card-shadow: #020204;
+  --card-shadow: #121212;
   --btn-bg: var(--background);
   --btn-bdr: #d3d6e7;
   --btn-text-color: #868892;
@@ -229,7 +229,7 @@ a {
   background-color: var(--card-bg);
   border-radius: 9px;
   border: 1px solid var(--card-bdr);
-  box-shadow: 0 0 30px var(--card-shadow);
+  box-shadow: 5px 5px 11px var(--card-shadow);
   overflow: hidden;
   line-height: 1.5;
   &:hover .post-link {
@@ -408,6 +408,12 @@ body.light {
   left: 2px;
 }
 
+.sectionWrapper {
+  height: auto;
+  width: 100%;
+  max-width: 123rem;
+  position: relative;
+}
 // Scroll
 ::-webkit-scrollbar-track {
   border-radius: 12px;

@@ -291,7 +291,7 @@ button.aws-btn .aws-btn__wrapper {
   background-color: rgba(0, 0, 0, 0.3);
   width: calc(100% - 2px);
   height: calc(100% - (var(--button-raise-level) * 2));
-  bottom: calc(1px - (var(--button-raise-level) / 2));
+  bottom: calc(0.5px - (var(--button-raise-level) / 2));
   left: 1px;
   position: absolute;
   border-radius: var(--button-default-border-radius);

@@ -10,6 +10,7 @@
   "dependencies": {
     "@loadable/component": "^5.12.0",
     "gatsby": "^2.23.11",
+    "gatsby-cli": "^2.12.52",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-google-analytics": "^2.3.6",
     "gatsby-plugin-manifest": "^2.4.14",
