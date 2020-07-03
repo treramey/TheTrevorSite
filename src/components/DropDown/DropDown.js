@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import "../../styles/global.scss";
 
-const Navigation = () => {
+const DropDown = () => {
   const [navActive, setnavActive] = useState(false);
 
   return (
@@ -30,8 +30,8 @@ const Navigation = () => {
               to="/"
               cover
               direction="left"
-              duration={2}
-              bg="#1D1D1D"
+              duration={1}
+              bg="var(--background)"
               className="navigation__link"
             >
               <span>about</span>
@@ -43,10 +43,10 @@ const Navigation = () => {
             onClick={() => setnavActive(!navActive)}
           >
             <AniLink
-              to="/projects"
+              to="/blog"
               cover
               direction="left"
-              duration={2}
+              duration={1}
               bg="#1D1D1D"
               className="navigation__link"
             >
@@ -63,7 +63,7 @@ const Navigation = () => {
               className="navigation__link"
               cover
               direction="left"
-              duration={2}
+              duration={1}
               bg="#1D1D1D"
             >
               <span>contact</span>
@@ -75,4 +75,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default DropDown;
