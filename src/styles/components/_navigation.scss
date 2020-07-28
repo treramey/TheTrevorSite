@@ -1,11 +1,15 @@
 .navigation {
+  display: none;
+  align-items: center;
   //Remove check box from view
   &__checkbox {
     display: none;
   }
   //Button
   &__button {
-    margin-left: 2rem;
+    position: fixed;
+    right: 33px;
+    top: 28px;
     font-size: 8px;
     z-index: $layer-burger;
     width: 2.2rem;
@@ -19,7 +23,7 @@
     display: inline-block;
     width: 100%;
     height: 2px;
-    background-color: var(--nav);
+    background-color: var(--primary-color);
     transition: all 300ms $cubic-bezier-primary, background-color 300ms ease-in;
     vertical-align: middle;
     margin: auto;
@@ -49,7 +53,7 @@
     transform: scale(1.6);
   }
   &__checkbox:checked + &__button &__line {
-    background-color: $color-text-nav-light;
+    background-color: var(--primary-color);
     transition: all 300ms $cubic-bezier-primary, background-color 300ms ease-out;
   }
   //Trransform into X
@@ -71,31 +75,32 @@
     position: fixed;
     z-index: $layer-nav;
     top: 0;
-    left: 0;
+    right: 0;
     background: var(--background);
-    width: 100%;
-    height: 0;
+    width: 0;
+    height: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 300ms ease-out;
+    transition: all 250ms ease-out;
   }
   //display navbar menu
   &__checkbox:checked ~ &__nav {
-    height: 100%;
+    width: 60%;
   }
   //remove list styling
   &__list {
     list-style: none;
     width: 40rem;
     margin: auto;
-    // @media only screen and (max-width: 31.25em) {
-    //   width: 80%;
-    // }
-    // @media only screen and (min-width: 100em) {
-    //   width: 80rem;
-    // }
+    padding:0;
+    @media only screen and (max-width: 31.25em) {
+      width: 80%;
+    }
+    @media only screen and (min-width: 100em) {
+      width: 80rem;
+    }
   }
   &__item {
     width: 100%;
@@ -127,7 +132,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: $color-nav-link-hover;
+      background-color: var(--primary-btn-hover);
       transform: scaleX(0);
       transition: all 300ms ease-out;
     }
@@ -136,7 +141,7 @@
     &:active,
     &:focus {
       text-decoration: none;
-      color: $color-text-nav-hover;
+      color: var(--primary-color);
       &:before {
         transition: all 300ms $cubic-bezier-primary;
         transform: scaleX(1);
@@ -146,71 +151,8 @@
   &__colorNav {
     color: $color-text-nav-light !important;
   }
-}
 
-/* Position and sizing of burger button */
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
-}
-
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #373a47;
-}
-
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  background: #a90000;
-}
-
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-}
-
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #bdc3c7;
-}
-
-/*
-Sidebar wrapper styles
-Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-*/
-.bm-menu-wrap {
-  position: fixed;
-  height: 100%;
-}
-
-/* General sidebar styles */
-.bm-menu {
-  background: #373a47;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-}
-
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
-}
-
-/* Individual item */
-.bm-item {
-  display: inline-block;
-}
-
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  @media only screen and (max-width: 48em) {
+    display: flex;
+  }
 }

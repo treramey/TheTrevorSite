@@ -51,7 +51,7 @@ const StyledDescription = styled.div`
   max-width: 500px;
   margin-top: 25px;
   width: 50%;
-  font-size:18px;
+  font-size: 18px;
   ${media.desktop`font-size: 15px;`};
   ${media.tablet`font-size: 15px;`};
   ${media.phablet`font-size: 15px;`};
@@ -94,7 +94,7 @@ const Hero = ({ data }) => {
   );
   const four = () => (
     <StyledDescription style={{ transitionDelay: "400ms" }}>
-      I'm a software engineer based in Boston, MA specializing in building (and
+      I'm a software engineer based in Dallas, TX specializing in building (and
       occasionally designing) exceptional websites, applications, and everything
       in between.
     </StyledDescription>
@@ -109,17 +109,11 @@ const Hero = ({ data }) => {
 
   return (
     <StyledContainer>
-      <StyledOverline >
-        Hi, my name is
-      </StyledOverline>
-      <StyledTitle >
-        Trevor Ramey.
-      </StyledTitle>
-      <StyledSubtitle >
-        I build things for the web.
-      </StyledSubtitle>
-      <StyledDescription >
-        I'm a software engineer based in Boston, MA specializing in building
+      <StyledOverline>Hi, my name is</StyledOverline>
+      <StyledTitle>Trevor Ramey.</StyledTitle>
+      <StyledSubtitle>I build things for the web.</StyledSubtitle>
+      <StyledDescription>
+        I'm a software engineer based in Dallas, TX specializing in building
         (and occasionally designing) exceptional websites, applications, and
         everything in between.
       </StyledDescription>

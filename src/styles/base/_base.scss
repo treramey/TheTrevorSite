@@ -70,9 +70,9 @@ a {
 }
 .site-wrapper {
   position: relative;
-  padding: 32px 72px;
   max-width: 1000px;
   // min-height: 100vh;
+  padding: 0 100px;
   margin: 0 auto;
   img {
     max-width: 100%;
@@ -80,7 +80,7 @@ a {
   @media only screen and (max-width: 64em) {
     padding-top: 0px;
     padding-bottom: 0px;
-    padding: 32px 72px;
+    padding: 0 100px;
   }
 
   @media only screen and (max-width: 30em) {
@@ -101,7 +101,7 @@ a {
 
 
 
-.navigation {
+.navigationLinks {
   display: flex;
   align-items: center;
   font-weight: 300;
@@ -120,6 +120,9 @@ a {
       margin-right: 0;
     }
   }
+  @media only screen and (max-width: 48em) {
+    visibility: hidden
+  }
 }
 .site-header {
   display: flex;
@@ -128,6 +131,9 @@ a {
   background: var(--site-header);
   margin-bottom: 32px;
   align-items: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 32px ;
 }
 .site-title a {
   color: var(--primary-color);
@@ -144,33 +150,7 @@ a {
   font-weight: 900;
   margin-bottom: 0.5rem;
 }
-// .button {
-//   padding: 18px 27px;
-//   display: inline-block;
-//   background: var(--btn-bg);
-//   border: 1px solid var(--btn-bdr);
-//   border-radius: 9px;
-//   text-decoration: none;
-//   color: var(--btn-text-color);
-//   font-size: 16px;
-//   font-weight: 400;
-//   margin: 0 20px 0 0;
-//   transition: background-color 0.3s linear;
-//   &.-primary {
-//     background-color: var(--primary-color);
-//     border-color: var(--primary-color);
-//     color: var(--primary-text-color);
-//     &:hover {
-//       background-color: var(--secondary-color);
-//       color: var(--primary-text-color);
-//       text-decoration: none;
-//     }
-//   }
-//   &:hover {
-//     background-color: var(--btn-hover-bg);
-//     color: var(--btn-hover-text-color);
-//   }
-// }
+
 .primary-content {
   font-size: 18px;
   margin-bottom: 32px;
@@ -204,7 +184,7 @@ a {
 .post-thumbnail {
   text-align: center;
   min-height: 380px;
-  //background-image: url('/assets/circles-light.png');
+  background-image: url('/assets/circles-light.png');
   background-color: var(--featured-bg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -380,6 +360,13 @@ body.light {
   border-radius: 100px;
   box-shadow: inset 0 0 0 2px;
   border: 6px solid transparent;
+  @media only screen and (max-width: 48em) {
+    position:absolute;
+    visibility: visible;
+    right: 100px;
+    top:34px;
+  }
+ 
 }
 .gg-sun::after,
 .gg-sun::before {
@@ -414,6 +401,12 @@ body.light {
   height: 20px;
   border: 2px solid;
   border-bottom-color: transparent;
+  @media only screen and (max-width: 48em) {
+    position:absolute;
+    visibility: visible;
+    right: 100px;
+    top:34px;
+  }
 }
 .gg-moon::after {
   content: "";
