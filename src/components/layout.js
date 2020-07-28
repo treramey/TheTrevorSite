@@ -19,13 +19,13 @@ export default ({ children }) => {
   );
   return (
     <div className="site-wrapper">
-      <Contact />
       <header className="site-header">
         <div className="site-title">
           <Link to="/">{data.site.siteMetadata.title}</Link>
         </div>
         <Navigation />
       </header>
+      <Contact />
       {children}
       <footer class="footer">
         <div class="footer__item">

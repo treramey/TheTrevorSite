@@ -28,7 +28,7 @@ export default () => (
           }}
         />
         <AniLink to="/contact" swipe top="exit" entryOffset={80}>
-          <AwesomeButton type="secondary"> Get in touch &rarr;</AwesomeButton>
+          <AwesomeButton type="primary"> Get in touch &rarr;</AwesomeButton>
         </AniLink>
       </div>
     )}

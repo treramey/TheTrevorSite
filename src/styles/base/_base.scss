@@ -7,7 +7,9 @@ body {
   margin-top: 0;
 }
 body.light {
-  --primary-color: #985eff;
+  --primary-color: #9600ff;
+  --primary-btn-hover: 	#00fff9;
+  --primary-btn-txt: 	#fff;
   --primary-text-color: #985eff;
   --featured-bg: #493b8a;
   --featured-text: #fff;
@@ -28,14 +30,16 @@ body.light {
   --nav: #212121;
 }
 body.dark {
-  --primary-color: #bb86fc;
+  --primary-color: #00fff9;
+  --primary-btn-hover: 	#9600ff;
+  --primary-btn-txt: 	rgba(255, 255, 255, 0.80);
   --primary-text-color: #bb86fc;
   --featured-bg: #66578d;
   --featured-text: #fff;
   --secondary-color: #66578d;
-  --background: #212121;
+  --background: #121319;
   --text-color: rgba(255, 255, 255, 0.9);
-  --text-secondary-color: rgba(255, 255, 255, 0.66);
+  --text-secondary-color: rgba(255, 255, 255, 0.80);
   --site-header: var(--background);
   --card-bg: #1d1d1d;
   --card-bdr: #1d1d1d;
@@ -67,24 +71,36 @@ a {
 .site-wrapper {
   position: relative;
   padding: 32px 72px;
-  max-width: 1140px;
+  max-width: 1000px;
+  // min-height: 100vh;
   margin: 0 auto;
   img {
     max-width: 100%;
   }
   @media only screen and (max-width: 64em) {
-    width: 85%;
-    padding: 32px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding: 32px 72px;
   }
 
-  @media only screen and (max-width: 31.25em) {
-    width: 78%;
+  @media only screen and (max-width: 30em) {
+    
+    padding: 0 25px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
-
-  @media only screen and (min-width: 87.5em) {
-    width: 120rem;
+  @media only screen and (max-width: 48em) {
+    
+    padding: 0 25px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
+  
+  
 }
+
+
+
 .navigation {
   display: flex;
   align-items: center;
