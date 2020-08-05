@@ -3,6 +3,8 @@ backend:
   repo: treramey/TheTrevorSite
 media_folder: static/assets
 public_folder: /assets
+
+
 collections:
   - name: settings
     label: Settings
@@ -38,6 +40,7 @@ collections:
                 label: Description
                 default: ""
                 required: false
+  
   - name: blog
     label: Blog
     folder: _data/blog
@@ -73,9 +76,10 @@ collections:
       - name: body
         label: Body
         widget: markdown
-  name: projects
-    label: Blog
-    folder: _data/blog
+        
+  - name: projects
+    label: Projects
+    folder: _data/projects
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     fields:
