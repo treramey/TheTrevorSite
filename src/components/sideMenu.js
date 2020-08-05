@@ -7,7 +7,7 @@ const SideMenu = () => {
   const [navActive, setnavActive] = useState(false);
 
   return (
-    <div className="navigation">
+    <>
       <input
         type="checkbox"
         className="navigation__checkbox"
@@ -20,42 +20,42 @@ const SideMenu = () => {
         <div className="navigation__line"></div>
         <div className="navigation__line"></div>
       </label>
-
-      <nav className="navigation__nav">
-        <ul className="navigation__list">
-          <li
-            className="navigation__item"
-            onClick={() => setnavActive(!navActive)}
-          >
-            <AniLink
-              to="/"
-              cover
-              direction="left"
-              duration={1}
-              bg="var(--background)"
-              className="navigation__link"
+      <div className="navigation">
+        <nav className="navigation__nav">
+          <ul className="navigation__list">
+            <li
+              className="navigation__item"
+              onClick={() => setnavActive(!navActive)}
             >
-              <span>about</span>
-            </AniLink>
-          </li>
+              <AniLink
+                to="/"
+                cover
+                direction="left"
+                duration={1}
+                bg="var(--background)"
+                className="navigation__link"
+              >
+                <span>about</span>
+              </AniLink>
+            </li>
 
-          <li
-            className="navigation__item"
-            onClick={() => setnavActive(!navActive)}
-          >
-            <AniLink
-              to="/blog"
-              cover
-              direction="left"
-              duration={1}
-              bg="#1D1D1D"
-              className="navigation__link"
+            <li
+              className="navigation__item"
+              onClick={() => setnavActive(!navActive)}
             >
-              <span>blog</span>
-            </AniLink>
-          </li>
+              <AniLink
+                to="/blog"
+                cover
+                direction="left"
+                duration={1}
+                bg="#1D1D1D"
+                className="navigation__link"
+              >
+                <span>blog</span>
+              </AniLink>
+            </li>
 
-          {/* <li
+            {/* <li
             className="navigation__item"
             onClick={() => setnavActive(!navActive)}
           >
@@ -70,9 +70,10 @@ const SideMenu = () => {
               <span>contact</span>
             </AniLink>
           </li> */}
-        </ul>
-      </nav>
-    </div>
+          </ul>
+        </nav>
+      </div>
+    </>
   );
 };
 

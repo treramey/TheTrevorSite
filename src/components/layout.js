@@ -3,6 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 import Navigation from "../components/navigation";
 import Contact from "./Contact/contact";
 import SideMenu from "../components/sideMenu";
+// import Headroom from "react-headroom";
 
 import "prismjs/themes/prism-okaidia.css";
 
@@ -19,8 +20,8 @@ export default ({ children }) => {
     `
   );
   return (
-    <div id="outer-container">
-      <main id="page-wrap">
+    <div>
+      
         <header className="site-header">
           <div className="site-title">
             <Link to="/">{data.site.siteMetadata.title}</Link>
@@ -28,6 +29,8 @@ export default ({ children }) => {
           <Navigation />
           <SideMenu />
         </header>
+      
+      <main>
         <div className="site-wrapper">
           <Contact />
           {children}

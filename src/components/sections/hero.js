@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { AwesomeButton } from "react-awesome-button";
 import styled from "styled-components";
-import media from "../../styles/media";
+import media from "../../styles/OtherStyles/media";
 
 const StyledContainer = styled.section`
   display: flex;
