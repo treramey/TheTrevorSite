@@ -21,7 +21,6 @@ export default ({ children }) => {
   );
   return (
     <div>
-      
         <header className="site-header">
           <div className="site-title">
             <Link to="/">{data.site.siteMetadata.title}</Link>
@@ -34,8 +33,8 @@ export default ({ children }) => {
         <div className="site-wrapper">
           <Contact />
           {children}
-          <footer class="footer">
-            <div class="footer__item">
+          <footer className="footer">
+            <div className="footer__item">
               <span>{new Date().getFullYear()} Trevor Ramey</span>
               <span>Looking to start a project? Let's talk</span>
             </div>

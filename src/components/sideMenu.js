@@ -12,10 +12,10 @@ const SideMenu = () => {
         type="checkbox"
         className="navigation__checkbox"
         id="nav_toggle"
-        onClick={() => setnavActive(!navActive)}
+        onChange={() => setnavActive(!navActive)}
         checked={navActive}
       />
-      <label for="nav_toggle" className="navigation__button">
+      <label htmlFor="nav_toggle" className="navigation__button">
         <div className="navigation__line"></div>
         <div className="navigation__line"></div>
         <div className="navigation__line"></div>

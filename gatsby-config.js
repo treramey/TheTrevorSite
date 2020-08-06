@@ -8,6 +8,19 @@ module.exports = {
   /* Your site config here */
   siteMetadata: require("./site-meta-data.json"),
   plugins: [
+    {
+      resolve:`@prismicio/gatsby-source-prismic-graphql`,
+      options:{
+        repositoryName:'thetrevorsite',
+        pages:[{
+          type:'Blog',
+          match:'/blog/:uid',
+          path:'/blog',
+          component:require.resolve('./src/templates/blogPage.js')
+        }]
+      },
+    },
+    
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`,
@@ -15,7 +28,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
-        path: `${__dirname}/_data`,
+        path: `${__dirname}/_data/blog`,
       },
     },
     {
