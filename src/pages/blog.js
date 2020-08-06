@@ -5,22 +5,19 @@ import Layout from "../components/layout";
 import PostLink from "../components/post-link";
 import HeroHeader from "../components/heroHeader";
 
-const ProjectPage = ({
-  data: {
-    site,
-    allMarkdownRemark: { edges },
-  },
-}) => {
-  const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
+const ProjectPage = ({ data }) => {
+  const blogs = data.prismic.allBlogs.edges;
+  const Posts = blogs
+    .sort((a, b) => b.release_date - a.release_date)
+    .map(blog => <PostLink key={blog.node._meta.id} post={blog.node} />);
 
+  console.log(Posts);
   return (
     <Layout>
-      <Helmet>
+      {/* <Helmet>
         <title>{site.siteMetadata.title}</title>
         <meta name="description" content={site.siteMetadata.description} />
-      </Helmet>
+      </Helmet> */}
       <HeroHeader />
       <h2>Blog Posts &darr;</h2>
       <div className="grids">{Posts}</div>
@@ -30,23 +27,18 @@ const ProjectPage = ({
 
 export default ProjectPage;
 export const pageQuery = graphql`
-  query projectPageQuery {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          id
-          excerpt(pruneLength: 250)
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            path
+  query BlogQuery {
+    prismic {
+      allBlogs {
+        edges {
+          node {
+            _meta {
+              uid
+              id
+            }
             title
-            thumbnail
+            release_date
+            featured_image
           }
         }
       }

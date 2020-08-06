@@ -5,10 +5,8 @@ import { RichText, Date as ParseDate } from "prismic-reactjs";
 import Layout from "../components/layout";
 import SliceZone from "../components/sliceZone";
 
-const BlogPage = ({ data }) => {
+const BlogPage = ({ data}) => {
   const blog = data.prismic.allBlogs.edges[0].node;
-  //   const { siteMetadata } = site;
-
   var formattedDate = new Intl.DateTimeFormat("en-US", {
     year: "numeric",
     month: "short",
@@ -19,12 +17,12 @@ const BlogPage = ({ data }) => {
   console.log(data);
   return (
     <Layout>
-      {/* <Helmet>
+      <Helmet>
         <title>
-          {frontmatter.title} | {siteMetadata.title}
+          {blog.meta_title}
         </title>
-        <meta name="description" content={frontmatter.metaDescription} />
-      </Helmet> */}
+        <meta name="description" content={blog.meta_description} />
+      </Helmet>
       <div className="blog-post-container">
         <article className="post">
           {!blog.featured_image && (
@@ -66,21 +64,23 @@ export const pageQuery = graphql`
             featured_image
             title
             release_date
+            meta_title
+            meta_description
             body {
               ... on PRISMIC_BlogBodyText {
                 type
                 primary {
-                    blog_paragraph
-                }
-              }
-              ... on PRISMIC_BlogBodyText1 {
-                type
-                primary {
-                  code
+                  blog_paragraph
                 }
               }
               ... on PRISMIC_BlogBodyAlert {
                 type
+              }
+              ... on PRISMIC_BlogBodyCode {
+                type
+                primary {
+                  code_snippet
+                }
               }
             }
             _meta {
@@ -92,4 +92,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

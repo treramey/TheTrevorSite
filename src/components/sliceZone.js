@@ -1,5 +1,6 @@
 import React from "react";
 import { RichText } from "prismic-reactjs";
+import CodeSlice from './CodeSlice'
 
 
 const SliceZone = ({body}) => {
@@ -12,15 +13,16 @@ const SliceZone = ({body}) => {
               switch (bodyContent.type) {
                 case "text":
                   return (
-                      <div className="blog-post-content" >
-                          <RichText render={bodyContent.primary.blog_paragraph}/>
+                      <div key={i} className="blog-post-content" >
+                          <RichText  render={bodyContent.primary.blog_paragraph}/>
                       </div>
-                    // <CodeSlice key={i} content={bodyContent.primary.code} />
                   )
                 case "code":
                   return (
-                      <div></div>
-                    // <CodeSlice key={i} content={bodyContent.primary.code} />
+                    <div key={i} className="blog-post-content" >
+
+                      <CodeSlice key={i} content={bodyContent.primary.code_snippet} />
+                    </div>
                   )
                 default:
                   return null
