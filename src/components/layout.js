@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import Navigation from "../components/navigation";
-import Contact from "./Contact/contact";
+import SocialLinks from "./SocialLinks";
 import SideMenu from "../components/sideMenu";
 // import Headroom from "react-headroom";
 
@@ -31,7 +31,7 @@ export default ({ children }) => {
       
       <main>
         <div className="site-wrapper">
-          <Contact />
+          <SocialLinks />
           {children}
           <footer className="footer">
             <div className="footer__item">

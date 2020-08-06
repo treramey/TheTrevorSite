@@ -25,20 +25,6 @@ module.exports = {
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/_data/blog`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'projects',
-        path: `${__dirname}/_data/projects/`,
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [

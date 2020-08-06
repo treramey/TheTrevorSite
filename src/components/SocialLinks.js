@@ -1,7 +1,7 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import { IoMdDocument } from "react-icons/io";
-import "../../styles/global.scss";
+import "../styles/global.scss";
 
 const Contact = () => {
   return (
